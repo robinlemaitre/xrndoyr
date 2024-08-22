@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart2, Users, FileText, Clock, Target, Cpu, Linkedin } from 'lucide-react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+import Navigation from './Navigation'; // Importez le composant Navigation
 import Contact from './Contact';
 
 // URLs des images
@@ -43,17 +44,7 @@ const EcopathsLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black">
       <header className="bg-[#073763] shadow-md fixed w-full z-10">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src={urlLogo} alt="Ecopaths Logo" className="h-10 mr-4" />
-          </div>
-          <div className="space-x-4">
-            <Link to="#solution" className="text-white hover:text-gray-200 transition duration-300">Solution</Link>
-            <Link to="#blog" className="text-white hover:text-gray-200 transition duration-300">Blog</Link>
-            <Link to="#about" className="text-white hover:text-gray-200 transition duration-300">À propos</Link>
-            <Link to="#contact" className="bg-white text-[#073763] px-4 py-2 hover:bg-gray-200 transition duration-300">Contactez-nous</Link>
-          </div>
-        </nav>
+  <Navigation />
       </header>
 
       <main>

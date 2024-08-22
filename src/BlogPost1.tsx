@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, BarChart2, Users, FileText, Clock, Target, Cpu, Linkedin } from 'lucide-react';
+import Navigation from './Navigation';
 
 // URL de l'image et de la vidéo
 const urlImage = "/image/spring_photo.jpeg"; // Remplacez par le nom correct du fichier pour l'image
@@ -9,18 +10,7 @@ const BlogPost1: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black">
       <header className="bg-[#073763] shadow-md fixed w-full z-10">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src="/image/Ecopaths_logo.png" alt="Ecopaths Logo" className="h-10 mr-4" />
-          </div>
-          <div className="space-x-4">
-            <a href="/" className="text-white hover:text-gray-200 transition duration-300">Accueil</a>
-            <a href="/#solution" className="text-white hover:text-gray-200 transition duration-300">Solution</a>
-            <a href="/#blog" className="text-white hover:text-gray-200 transition duration-300">Blog</a>
-            <a href="/#about" className="text-white hover:text-gray-200 transition duration-300">À propos</a>
-            <a href="/#contact" className="bg-white text-[#073763] px-4 py-2 hover:bg-gray-200 transition duration-300">Contactez-nous</a>
-          </div>
-        </nav>
+      <Navigation />
       </header>
 
       <main className="pt-24">
