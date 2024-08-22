@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import EcopathsLanding from './ecopaths-landing-page';
 import BlogPost1 from './BlogPost1';
 import BlogPost2 from './BlogPost2';
