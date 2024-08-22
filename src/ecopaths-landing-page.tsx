@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart2, Users, FileText, Clock, Target, Cpu, Linkedin } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom'; 
 import Navigation from './Navigation'; // Importez le composant Navigation
 import Contact from './Contact';
@@ -53,10 +54,11 @@ const EcopathsLanding: React.FC = () => {
             <div>
               <h1 className="text-5xl font-bold mb-4 text-black">La puissance de l'intelligence artificielle au service de votre transition écologique et climatique.</h1>
               <p className="text-xl mb-8 text-black">Ecopaths utilise l'intelligence artificielle pour rendre possible la réalisation d'analyses du cycle de vie à très large échelle.</p>
-              <Link to="#contact" className="bg-[#073763] text-white px-8 py-4 text-lg hover:bg-blue-800 transition duration-300 inline-flex items-center">
-                En savoir plus
-                <ArrowRight className="ml-2" />
-              </Link>
+             <HashLink smooth to="/#contact" className="bg-[#073763] text-white px-8 py-4 text-lg hover:bg-blue-800 transition duration-300 inline-flex items-center"> En savoir plus
+                <ArrowRight className="ml-2" /></HashLink>
+
+               
+            
             </div>
             <div className="flex justify-end">
               <img src={urlImageDroite} alt="Illustration" className="object-contain h-full max-h-[calc(100%-64px)]" />
