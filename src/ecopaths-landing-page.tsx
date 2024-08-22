@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart2, Users, FileText, Clock, Target, Cpu, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import Navigation from './Navigation'; // Importez le composant Navigation
 import Contact from './Contact';
 
 // URLs des images
-const urlLogo = "/image/Ecopaths_logo.png"; // Remplacez par le nom correct du fichier logo
-const urlPartenaire1 = "/image/Logo_IncubAlliance.png";
-const urlPartenaire2 = "/image/Logo_FT_Paris-Saclay_Blanc-257x300.png";
-const urlPartenaire3 = "/image/logo_microsoft_for_startups.png";
-const urlPartenaire4 = "/image/SQYCUB.jpeg";
-const urlPartenaire5 = "/image/Spring_50.png";
-const urlClient1 = "/image/logo_danone.png"; // Remplacez par les noms corrects des fichiers clients
-const urlClient2 = "/image/logo_YR.png";
-const urlClient3 = "/image/logo_BWT.png"; // Utilisé comme client
-const urlClient4 = "/image/logo_sepal.png"; // Mettre le bon fichier pour client 4
-const urlClient5 = "/image/logo_m_extend.webp"; // Mettre le bon fichier pour client 5
-const urlArticle1 = "/image/Spring_50.png"; // Remplacez par les noms corrects des fichiers articles
-const urlArticle2 = "/image/busy-woman-working-night-front-computer-taking-notes-writing.png";
-const urlArticle3 = "/image/ecoinvent-Logo-no-tagline.png"; // Utilisé comme article
-const urlEcoinvent = "/image/ecoinvent-Logo-no-tagline.png"; // Remplacez par le nom correct du fichier ecoinvent
-const urlImageDroite = "/image/dashboard.png"; // Remplacez par le nom correct du fichier pour l'image à droite du titre
+const urlLogo = `${process.env.PUBLIC_URL}/image/Ecopaths_logo.png`; // Remplacez par le nom correct du fichier logo
+const urlPartenaire1 = `${process.env.PUBLIC_URL}/image/Logo_IncubAlliance.png`;
+const urlPartenaire2 = `${process.env.PUBLIC_URL}/image/Logo_FT_Paris-Saclay_Blanc-257x300.png`;
+const urlPartenaire3 = `${process.env.PUBLIC_URL}/image/logo_microsoft_for_startups.png`;
+const urlPartenaire4 = `${process.env.PUBLIC_URL}/image/SQYCUB.jpeg`;
+const urlPartenaire5 = `${process.env.PUBLIC_URL}/image/Spring_50.png`;
+const urlClient1 = `${process.env.PUBLIC_URL}/image/logo_danone.png`; // Remplacez par les noms corrects des fichiers clients
+const urlClient2 = `${process.env.PUBLIC_URL}/image/logo_YR.png`;
+const urlClient3 = `${process.env.PUBLIC_URL}/image/logo_BWT.png`; // Utilisé comme client
+const urlClient4 = `${process.env.PUBLIC_URL}/image/logo_sepal.png`; // Mettre le bon fichier pour client 4
+const urlClient5 = `${process.env.PUBLIC_URL}/image/logo_m_extend.webp`; // Mettre le bon fichier pour client 5
+const urlArticle1 = `${process.env.PUBLIC_URL}/image/Spring_50.png`; // Remplacez par les noms corrects des fichiers articles
+const urlArticle2 = `${process.env.PUBLIC_URL}/image/busy-woman-working-night-front-computer-taking-notes-writing.png`;
+const urlArticle3 = `${process.env.PUBLIC_URL}/image/ecoinvent-Logo-no-tagline.png`; // Utilisé comme article
+const urlEcoinvent = `${process.env.PUBLIC_URL}/image/ecoinvent-Logo-no-tagline.png`; // Remplacez par le nom correct du fichier ecoinvent
+const urlImageDroite = `${process.env.PUBLIC_URL}/image/dashboard.png`; // Remplacez par le nom correct du fichier pour l'image à droite du titre
 
 // URLs de redirection des partenaires
 const linkPartenaire1 = "https://www.incuballiance.fr/";

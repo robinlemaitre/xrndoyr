@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 // Assurez-vous que cette URL est correcte pour votre logo
-const urlLogo = "/image/Ecopaths_logo.png";
+const urlLogo =`${process.env.PUBLIC_URL}/image/Ecopaths_logo.png`;
 
 const Navigation: React.FC = () => {
   const navigate = useNavigate();
