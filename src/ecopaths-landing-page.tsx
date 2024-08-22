@@ -1,5 +1,3 @@
-// src/ecopaths-landing-page.tsx
-
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart2, Users, FileText, Clock, Target, Cpu, Linkedin } from 'lucide-react';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -133,7 +131,49 @@ const EcopathsLanding: React.FC = () => {
 
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <h2 id="about" className="text-4xl font-bold mb-12 text-black">À propos d'Ecopaths.</h2>
+            <h2 className="text-4xl font-bold mb-12 text-black">La fiabilité d'Ecoinvent.</h2>
+            <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 rounded-lg shadow-lg p-8">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <img src={urlEcoinvent} alt="Logo Ecoinvent" className="mx-auto h-24 object-contain" />
+              </div>
+              <div className="md:w-1/2">
+                <h3 className="text-2xl font-semibold mb-4 text-black">La base de données ICV la plus reconnue et mondialement utilisée.</h3>
+                <ul className="text-black list-disc list-inside space-y-2">
+                  <li>Plus de 18,000 ensembles de données ICV</li>
+                  <li>Couvrant une large gamme de secteurs industriels</li>
+                  <li>Données régionalisées pour une précision accrue</li>
+                  <li>Mises à jour régulières pour refléter les dernières avancées</li>
+                  <li>Conforme aux normes ISO 14040/14044</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="blog" className="py-20 bg-gray-100">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold mb-12 text-black">Blog.</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[urlArticle1, urlArticle2, urlArticle3].map((url, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                  <img src={url} alt={`Article ${index + 1}`} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-black">Ecopaths, Lauréat de la catégorie cleanTech du concours d'innovation spring 50</h3>
+                    <p className="text-black mb-4">Ecopaths a été récompensé pour être l'une des startups les plus prometteuses de la deep tech de l'écosystème Paris Saclay.</p>
+                    <Link to="/blogpost1" className="text-[#073763] hover:text-blue-800 inline-flex items-center transition duration-300">
+                      Lire la suite
+                      <ArrowRight className="ml-2" size={16} />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold mb-8 text-black">À propos d'Ecopaths.</h2>
             <div className="max-w-3xl">
               <p className="text-lg mb-4 text-black">
                 Ecopaths est une startup technologique innovante et engagée en faveur de l'environnement, dont l'objectif premier est d'accélérer la transition écologique des entreprises, en résolvant leurs défis grâce à la puissance des modèles de langage.
@@ -144,50 +184,9 @@ const EcopathsLanding: React.FC = () => {
           </div>
         </section>
 
-        <section id="blog" className="py-20 bg-gray-100">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold mb-12 text-black">Blog.</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src={urlArticle1} alt="Article 1" className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-black">Ecopaths, Lauréat de la catégorie cleanTech du concours d'innovation spring 50</h3>
-                  <p className="text-black mb-4">Ecopaths a été récompensé pour être l'une des startups les plus prometteuses de la deep tech de l'écosystème Paris Saclay.</p>
-                  <Link to="/blog-post-1" className="text-[#073763] hover:text-blue-800 inline-flex items-center transition duration-300">
-                    Lire la suite
-                    <ArrowRight className="ml-2" size={16} />
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src={urlArticle2} alt="Article 2" className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-black">Titre de l'article 2</h3>
-                  <p className="text-black mb-4">Contenu de l'article 2...</p>
-                  <Link to="/blog-post-2" className="text-[#073763] hover:text-blue-800 inline-flex items-center transition duration-300">
-                    Lire la suite
-                    <ArrowRight className="ml-2" size={16} />
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src={urlArticle3} alt="Article 3" className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-black">Titre de l'article 3</h3>
-                  <p className="text-black mb-4">Contenu de l'article 3...</p>
-                  <Link to="/blog-post-3" className="text-[#073763] hover:text-blue-800 inline-flex items-center transition duration-300">
-                    Lire la suite
-                    <ArrowRight className="ml-2" size={16} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="contact" className="py-20 bg-gray-100">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold mb-8 text-black">Contactez-nous.</h2>
+          <div className="container mx-auto px-6 max-w-lg">
+            <h2 className="text-4xl font-bold mb-8 text-left text-black">Contactez-nous.</h2>
             <Contact />
           </div>
         </section>
@@ -203,7 +202,7 @@ const EcopathsLanding: React.FC = () => {
             ))}
           </div>
           <div className="flex space-x-4 mt-4">
-            <a href={linkLinkedIn} className="text-white hover:text-gray-300">
+            <a href="https://www.linkedin.com/company/93853240/" className="text-white hover:text-gray-300">
               <Linkedin size={24} />
             </a>
           </div>
