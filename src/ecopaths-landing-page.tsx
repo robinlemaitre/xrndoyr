@@ -111,7 +111,7 @@ const EcopathsLanding: React.FC = () => {
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <FileText className="mb-4 text-[#073763]" size={48} />
                 <h3 className="text-xl font-semibold mb-2 text-black">Reporting automatisé.</h3>
-                <p className="text-black">Générez facilement des rapports conformes au standard EN15804 pour vos produits et des rapports d'analyse par scénario, facilitant la communication avec vos parties prenantes internes et externes.</p>
+                <p className="text-black">Générez facilement des rapports pour vos produits et des rapports d'analyse par scénario, facilitant la communication avec vos parties prenantes internes et externes.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <Clock className="mb-4 text-[#073763]" size={48} />
