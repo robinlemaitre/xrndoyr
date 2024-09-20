@@ -4,8 +4,7 @@ import { Linkedin } from 'lucide-react';
 
 // URLs des images
 const urlLogo = "/image/Ecopaths_logo.png";
-const urlIllustration1 = "/image/sphere-with-trees.png"; // Remplacez par le nom correct du fichier d'illustration 1
-const urlIllustration2 = "/image/illustration2.png"; // Remplacez par le nom correct du fichier d'illustration 2
+const urlIllustration1 = "/image/csrd.png"; 
 
 // URL de redirection LinkedIn
 const linkLinkedIn = "https://www.linkedin.com/company/93853240/";
@@ -30,73 +29,110 @@ const BlogPost2: React.FC = () => {
       <main className="pt-24">
         <div className="container mx-auto px-6 py-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold mb-6 text-left">L'ACV automatisée : Le secret pour optimiser votre ROI carbone et décarboner efficacement</h1>
+            <h1 className="text-4xl font-bold mb-6 text-left">L'ACV automatisée : La clé pour relever les défis de la CSRD</h1>
             <img src={urlIllustration1} alt="Illustration 1" className="w-full h-auto mb-6 max-w-md mx-auto" />
 
-            <h2 className="text-2xl font-bold mb-4">Le Scope 3 : le défi majeur de votre stratégie carbone</h2>
+            <h2 className="text-2xl font-bold mb-4">Le cadre exigeant des ESRS</h2>
             <p className="mb-4">
-              Commençons par un rappel qui fait mal : pour la plupart des entreprises, le Scope 3 représente plus de 70% de leur empreinte carbone totale. C'est énorme, et c'est là que se cachent vos plus gros leviers de décarbonation.
+              La CSRD, en s'appuyant sur les ESRS, pousse les entreprises à fournir une vue d'ensemble exhaustive de leurs performances environnementales. Cela inclut une variété de données allant des émissions de gaz à effet de serre (GES) à la consommation d'eau, en passant par la gestion des déchets et l'impact sur la biodiversité. Le tableau ci-dessous illustre les principales catégories de reporting environnemental imposées par les ESRS :
             </p>
 
-            <h2 className="text-2xl font-bold mb-4">L'ACV automatisée : votre boussole pour naviguer dans le Scope 3</h2>
-            <p className="mb-4">
-              L'ACV automatisée n'est pas qu'un outil de mesure sophistiqué. C'est votre allié stratégique pour décrypter votre Scope 3 et optimiser vos efforts de décarbonation. Voici comment :
-            </p>
-            <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2"><strong>Cartographie précise de votre chaîne de valeur</strong> : Identifiez les points chauds d'émissions avec une précision chirurgicale.</li>
-              <li className="mb-2"><strong>Simulation de scénarios</strong> : Testez l'impact de différentes décisions avant de les mettre en œuvre.</li>
-              <li><strong>Évaluation des fournisseurs</strong> : Comparez l'empreinte carbone de vos fournisseurs sur des bases objectives.</li>
-            </ul>
+            <table className="w-full text-left mb-6 border-collapse rounded-lg overflow-hidden shadow-lg">
+              <thead>
+                <tr className="bg-[#073763] text-white">
+                  <th className="px-4 py-3 font-semibold">Impact</th>
+                  <th className="px-4 py-3 font-semibold">Data</th>
+                  <th className="px-4 py-3 font-semibold">Description</th>
+                  <th className="px-4 py-3 font-semibold">ESRS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Émissions de gaz à effet de serre (GES)</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Scope 1 : Émissions directes<br/>- Scope 2 : Émissions indirectes liées à l'énergie<br/>- Scope 3 : Émissions indirectes de la chaîne de valeur</td>
+                  <td className="border-t border-gray-300 px-4 py-4">L'entreprise doit fournir des données quantifiées sur ses émissions de GES, ventilées par scope (1, 2, 3), et expliquer les méthodologies utilisées pour les mesurer.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E1 - Changement climatique</td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Objectifs de réduction des émissions</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Objectifs quantitatifs de réduction des émissions de CO₂<br/>- Stratégies pour atteindre ces objectifs</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent indiquer leurs objectifs en matière de réduction des émissions de GES, fournir un calendrier et démontrer leur compatibilité avec des objectifs de neutralité carbone (ex: Accord de Paris).</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E1</td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Émissions évitées</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Émissions de GES évitées ou réduites grâce aux actions de l’entreprise</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent rendre compte des actions prises pour éviter ou réduire les émissions de GES et quantifier les résultats.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E1</td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Consommation d’énergie</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Quantité totale d’énergie consommée<br/>- Répartition entre énergie renouvelable et non renouvelable</td>
+                  <td className="border-t border-gray-300 px-4 py-4">L’entreprise doit détailler sa consommation énergétique, en distinguant entre énergie renouvelable (éolien, solaire, etc.) et non renouvelable (pétrole, gaz, charbon).</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E1 / ESRS E3 - Utilisation des ressources</td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Consommation d'eau</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Quantité totale d'eau consommée<br/>- Gestion de l’eau (eau recyclée, économisée, etc.)</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent indiquer la quantité d'eau consommée à travers toutes leurs activités et stratégies d’optimisation (réduction, réutilisation).</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E3 - Utilisation des ressources</td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Déchets et gestion des déchets</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Quantité totale de déchets produits<br/>- Pourcentage des déchets recyclés, réutilisés ou enfouis</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent quantifier la production de déchets et indiquer comment ces déchets sont gérés (recyclage, réutilisation, enfouissement).</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E3 - Économie circulaire</td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Impact sur la biodiversité et les écosystèmes</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Impact de l’activité sur la biodiversité<br/>- Actions pour réduire l'impact sur les écosystèmes</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent évaluer les risques et impacts liés à leur utilisation des terres, extraction de ressources et exploitation agricole sur la biodiversité et les écosystèmes.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E4 - Biodiversité</td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Pollution (Air, eau, sols)</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Émissions de polluants dans l’air, l’eau et les sols<br/>- Impact des activités industrielles sur l'environnement</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent rapporter des données sur leurs émissions de polluants, comme les COV, NOx, et autres composés toxiques, ainsi que les actions pour réduire ces émissions.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E2 - Pollution</td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Stratégie d’adaptation au changement climatique</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Évaluation des risques climatiques pour l’entreprise<br/>- Stratégies pour s’adapter aux changements climatiques</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent identifier les risques liés au changement climatique (ex: hausse des températures, événements climatiques extrêmes) et décrire les mesures prises pour s'adapter à ces risques.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E5 - Résilience climatique</td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="border-t border-gray-300 px-4 py-4">Efforts pour l'économie circulaire</td>
+                  <td className="border-t border-gray-300 px-4 py-4">- Stratégies de réduction des déchets<br/>- Utilisation de matériaux recyclés<br/>- Durabilité des produits</td>
+                  <td className="border-t border-gray-300 px-4 py-4">Les entreprises doivent expliquer leurs pratiques d’économie circulaire, notamment l'utilisation de matériaux recyclés, la réduction des déchets et la durabilité des produits.</td>
+                  <td className="border-t border-gray-300 px-4 py-4">ESRS E3 - Économie circulaire</td>
+                </tr>
+              </tbody>
+            </table>
 
-            <h2 className="text-2xl font-bold mb-4">Le ROI carbone : le nerf de la guerre</h2>
+            <h2 className="text-2xl font-bold mb-4">Pourquoi l'ACV automatisée est essentielle</h2>
             <p className="mb-4">
-              L'ACV automatisée vous permet de calculer un indicateur clé : le ROI carbone. C'est simple : pour chaque euro investi dans une initiative de décarbonation, combien de tonnes de CO2 économisez-vous ? 
-            </p>
-            <p className="mb-4">
-              Imaginez que vous ayez 100 000 € à investir dans votre transition écologique. Où les dépenser ?
-            </p>
-            <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2"><strong>Option A</strong> : Remplacer votre flotte de véhicules par des modèles électriques</li>
-              <li className="mb-2"><strong>Option B</strong> : Optimiser votre chaîne logistique</li>
-              <li><strong>Option C</strong> : Travailler avec vos fournisseurs pour réduire leurs émissions</li>
-            </ul>
-            <p className="mb-4">
-              L'ACV automatisée vous dira précisément laquelle de ces options offre le meilleur ROI carbone. Vous pourriez découvrir, par exemple, que l'option C permet d'économiser 10 fois plus de CO2 par euro investi que l'option A.
+              L'ACV fournit une méthode robuste pour capturer les impacts environnementaux sur l'ensemble du cycle de vie d'un produit, depuis l'extraction des matières premières jusqu'à la fin de vie. Avec l'automatisation, ces analyses deviennent plus rapides, plus cohérentes et moins sujettes à des erreurs humaines. Les entreprises peuvent ainsi s'assurer que leurs rapports aux ESRS sont non seulement complets mais aussi d'une précision inégalée.
             </p>
 
-            <h2 className="text-2xl font-bold mb-4">Des indicateurs qui guident votre stratégie</h2>
+            <h2 className="text-2xl font-bold mb-4">Alignement avec la double matérialité</h2>
             <p className="mb-4">
-              Au-delà du ROI carbone, l'ACV automatisée vous fournit d'autres indicateurs cruciaux :
-            </p>
-            <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2"><strong>Intensité carbone par unité de valeur</strong> : Mesurez vos émissions par euro de chiffre d'affaires. C'est le baromètre de votre découplage entre croissance et impact environnemental.</li>
-              <li className="mb-2"><strong>Potentiel de réduction par poste</strong> : Identifiez les maillons de votre chaîne de valeur où vos efforts auront le plus d'impact.</li>
-              <li><strong>Score de maturité fournisseurs</strong> : Évaluez et suivez la performance environnementale de vos fournisseurs.</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold mb-4">Passer de la mesure à l'action</h2>
-            <p className="mb-4">
-              Avec ces données en main, vous pouvez enfin agir de manière ciblée et efficace :
-            </p>
-            <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2"><strong>Redéfinissez votre politique d'achat</strong> : Intégrez le ROI carbone dans vos critères de sélection des fournisseurs.</li>
-              <li className="mb-2"><strong>Optimisez votre logistique</strong> : Identifiez et corrigez les inefficacités de votre chaîne d'approvisionnement.</li>
-              <li className="mb-2"><strong>Repensez vos produits</strong> : Utilisez l'ACV dès la phase de conception pour créer des produits réellement durables.</li>
-              <li><strong>Engagez vos parties prenantes</strong> : Utilisez des données concrètes pour mobiliser fournisseurs, clients et investisseurs autour de votre stratégie de décarbonation.</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold mb-4">Conclusion : l'ACV automatisée, votre atout pour une décarbonation intelligente</h2>
-            <p className="mb-4">
-              L'ACV automatisée n'est pas une solution miracle, mais c'est l'outil qui vous permettra de transformer votre approche de la décarbonation. En vous concentrant sur le ROI carbone, vous vous assurez que chaque action, chaque euro investi, contribue de manière optimale à la réduction de votre empreinte carbone.
-            </p>
-            <p className="mb-4">
-              Dans un monde où les contraintes réglementaires se durcissent et où les attentes des parties prenantes ne cessent de croître, l'ACV automatisée vous donne les moyens de passer d'une approche intuitive à une stratégie basée sur des données concrètes.
-            </p>
-            <p className="mb-4">
-              Alors, prêt à optimiser votre ROI carbone et à faire de votre Scope 3 un levier de performance plutôt qu'un fardeau ? L'avenir de votre entreprise, et celui de notre planète, en dépendent.
+              La CSRD introduit la notion de double matérialité, exigeant des entreprises qu'elles prennent en compte à la fois l'impact de leurs activités sur l'environnement et les risques financiers associés à ces impacts. L'ACV automatisée aide à répondre à ces deux exigences en fournissant une vision claire des conséquences environnementales (matérialité environnementale) et en évaluant les risques futurs potentiels pour l'entreprise (matérialité financière).
             </p>
 
-            <img src={urlIllustration2} alt="Illustration 2" className="w-full h-auto mb-6 max-w-md mx-auto" />
+            <h2 className="text-2xl font-bold mb-4">Faciliter la prise de décisions stratégiques</h2>
+            <p className="mb-4">
+              Grâce à l'ACV, les entreprises peuvent identifier les points de levier les plus importants pour réduire leur impact environnemental tout en maximisant leur performance économique. Cette approche permet de faire des choix éclairés qui tiennent compte des besoins de durabilité tout en assurant la résilience à long terme de l'entreprise.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
+            <p className="mb-4">
+              La CSRD et les ESRS représentent une nouvelle ère de responsabilité pour les entreprises, les obligeant à s'engager dans une transparence totale de leurs impacts environnementaux. L'automatisation de l'ACV n'est pas seulement un outil pour se conformer à ces régulations, c'est aussi un moteur de changement, permettant aux entreprises de naviguer dans cette complexité avec confiance. En intégrant une ACV automatisée, les entreprises peuvent non seulement respecter les normes, mais aussi se positionner comme des leaders dans le domaine de la durabilité.
+            </p>
+            <p className="mb-4">
+              Article par Robin Lemaitre, Co-fondateur d'Ecopaths.
+            </p>
+
           </div>
         </div>
       </main>
