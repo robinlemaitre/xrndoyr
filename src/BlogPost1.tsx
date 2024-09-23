@@ -1,9 +1,8 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
+import React, { useEffect } from 'react';
 import { Linkedin } from 'lucide-react';
+import Navigation from './Navigation'; // Importe le composant Navigation
 
 // URLs des images et des vidéos
-const urlLogo = "/image/Ecopaths_logo.png";
 const urlImage = "/image/spring_photo.jpeg"; // Remplacez par le nom correct du fichier d'image
 const urlLogoIncubAlliance = "/image/Logo_IncubAlliance.png";
 const urlLogoFrenchTech = "/image/Logo_FT_Paris-Saclay_Blanc-257x300.png";
@@ -16,20 +15,14 @@ const videoUrl1 = "https://tv78.com/4-start-up-saint-quentinoises-laureates-du-s
 const linkLinkedIn = "https://www.linkedin.com/company/93853240/";
 
 const BlogPost1: React.FC = () => {
+  useEffect(() => {
+    // Faire défiler vers le haut au montage du composant
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-white text-black">
       <header className="bg-[#073763] shadow-md fixed w-full z-10">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src={urlLogo} alt="Ecopaths Logo" className="h-10 mr-4" />
-          </div>
-          <div className="space-x-4">
-            <HashLink smooth to="/#solution" className="text-white hover:text-gray-200 transition duration-300">Solution</HashLink>
-            <HashLink smooth to="/#blog" className="text-white hover:text-gray-200 transition duration-300">Blog</HashLink>
-            <HashLink smooth to="/#contact" className="text-white hover:text-gray-200 transition duration-300">Contactez-nous</HashLink>
-            <HashLink smooth to="/#contact" className="bg-white text-[#073763] px-4 py-2 hover:bg-gray-200 transition duration-300">Contactez-nous</HashLink>
-          </div>
-        </nav>
+        <Navigation /> {/* Remplace le header par le composant Navigation */}
       </header>
 
       <main className="pt-24">

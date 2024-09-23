@@ -1,29 +1,22 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
+import React, { useEffect } from 'react';
+import Navigation from './Navigation'; // Importe le composant Navigation
 import { Linkedin } from 'lucide-react';
 
 // URLs des images
-const urlLogo = "/image/Ecopaths_logo.png";
 const urlIllustration1 = "/image/csrd.png"; 
 
 // URL de redirection LinkedIn
 const linkLinkedIn = "https://www.linkedin.com/company/93853240/";
 
 const BlogPost2: React.FC = () => {
+  useEffect(() => {
+    // Faire défiler vers le haut au montage du composant
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-white text-black">
       <header className="bg-[#073763] shadow-md fixed w-full z-10">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src={urlLogo} alt="Ecopaths Logo" className="h-10 mr-4" />
-          </div>
-          <div className="space-x-4">
-            <HashLink smooth to="/#solution" className="text-white hover:text-gray-200 transition duration-300">Solution</HashLink>
-            <HashLink smooth to="/#blog" className="text-white hover:text-gray-200 transition duration-300">Blog</HashLink>
-            <HashLink smooth to="/#contact" className="text-white hover:text-gray-200 transition duration-300">Contactez-nous</HashLink>
-            <HashLink smooth to="/#contact" className="bg-white text-[#073763] px-4 py-2 hover:bg-gray-200 transition duration-300">Contactez-nous</HashLink>
-          </div>
-        </nav>
+        <Navigation /> {/* Remplace le header par le composant Navigation */}
       </header>
 
       <main className="pt-24">

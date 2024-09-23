@@ -12,16 +12,13 @@ const urlPartenaire2 = `${process.env.PUBLIC_URL}/image/Logo_FT_Paris-Saclay_Bla
 const urlPartenaire3 = `${process.env.PUBLIC_URL}/image/logo_microsoft_for_startups.png`;
 const urlPartenaire4 = `${process.env.PUBLIC_URL}/image/SQYCUB.jpeg`;
 const urlPartenaire5 = `${process.env.PUBLIC_URL}/image/Spring_50.png`;
-const urlClient1 = `${process.env.PUBLIC_URL}/image/logo_danone.png`;
-const urlClient2 = `${process.env.PUBLIC_URL}/image/logo_YR.png`;
-const urlClient3 = `${process.env.PUBLIC_URL}/image/logo_BWT.png`;
-const urlClient4 = `${process.env.PUBLIC_URL}/image/logo_sepal.png`;
-const urlClient5 = `${process.env.PUBLIC_URL}/image/logo_m_extend.webp`;
+const urlImageDroite = `${process.env.PUBLIC_URL}/image/dashboard.png`; // Image correcte
+// URLs des images
+const urlEcoinvent = `${process.env.PUBLIC_URL}/image/ecoinvent-Logo-no-tagline.png`;
 const urlArticle1 = `${process.env.PUBLIC_URL}/image/Spring_50.png`;
 const urlArticle2 = `${process.env.PUBLIC_URL}/image/CSRD.png`;
 const urlArticle3 = `${process.env.PUBLIC_URL}/image/caddie.jpg`;
-const urlEcoinvent = `${process.env.PUBLIC_URL}/image/ecoinvent-Logo-no-tagline.png`;
-const urlImageDroite = `${process.env.PUBLIC_URL}/image/dashboard.png`;
+
 
 // URLs de redirection des partenaires
 const linkPartenaire1 = "https://www.incuballiance.fr/";
@@ -44,7 +41,7 @@ const EcopathsLanding: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <header className="bg-[#073763] shadow-md fixed w-full z-10">
+      <header className="bg-[#073763] shadow-md fixed w-full z-20"> {/* Augmenté le z-index */}
         <Navigation />
       </header>
 
@@ -52,15 +49,19 @@ const EcopathsLanding: React.FC = () => {
         <section className="relative h-screen flex items-center overflow-hidden pt-24 bg-[#E0F7FA]">
           <div className="relative z-10 text-left text-black w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">La puissance de l'intelligence artificielle au service de votre transition écologique et climatique.</h1>
-              <p className="text-lg md:text-xl mb-8 text-black">Ecopaths utilise l'intelligence artificielle pour rendre possible la réalisation d'analyses du cycle de vie à très large échelle.</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
+                La puissance de l'intelligence artificielle au service de votre transition écologique et climatique.
+              </h1>
+              <p className="text-lg md:text-xl mb-8 text-black">
+                Ecopaths utilise l'intelligence artificielle pour rendre possible la réalisation d'analyses du cycle de vie à très large échelle.
+              </p>
               <HashLink smooth to="/#contact" className="bg-[#073763] text-white px-6 md:px-8 py-3 md:py-4 text-lg hover:bg-blue-800 transition duration-300 inline-flex items-center">
                 En savoir plus
                 <ArrowRight className="ml-2" />
               </HashLink>
             </div>
             <div className="flex justify-center md:justify-end mt-6 md:mt-0">
-              <img src={urlImageDroite} alt="Illustration" className="object-contain h-full max-h-[300px] md:max-h-[calc(100%-64px)]" />
+              <img src={urlImageDroite} alt="Illustration" className="object-contain max-h-[400px] md:max-h-[500px]" /> {/* Taille de l'image augmentée */}
             </div>
           </div>
         </section>
