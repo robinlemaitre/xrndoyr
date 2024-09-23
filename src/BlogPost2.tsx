@@ -3,7 +3,7 @@ import Navigation from './Navigation'; // Importe le composant Navigation
 import { Linkedin } from 'lucide-react';
 
 // URLs des images
-const urlIllustration1 = "/image/csrd.png"; 
+const urlIllustration1 = `${process.env.PUBLIC_URL}/image/csrd.png`; 
 
 // URL de redirection LinkedIn
 const linkLinkedIn = "https://www.linkedin.com/company/93853240/";

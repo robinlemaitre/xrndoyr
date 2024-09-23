@@ -3,7 +3,7 @@ import { Linkedin } from 'lucide-react';
 import Navigation from './Navigation'; // Importe le composant Navigation
 
 // URLs des images et des vidéos
-const urlImage = "/image/spring_photo.jpeg"; // Remplacez par le nom correct du fichier d'image
+const urlImage = `${process.env.PUBLIC_URL}/image/Spring_photo.jpeg`; // Remplacez par le nom correct du fichier d'image
 const urlLogoIncubAlliance = "/image/Logo_IncubAlliance.png";
 const urlLogoFrenchTech = "/image/Logo_FT_Paris-Saclay_Blanc-257x300.png";
 const urlLogoMicrosoft = "/image/logo_microsoft_for_startups.png";
